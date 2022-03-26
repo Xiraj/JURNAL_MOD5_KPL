@@ -4,7 +4,7 @@ public class main {
         SayaTubeVideo vid2 = new SayaTubeVideo("Review Blacklist oleh Akbar");
         SayaTubeVideo vid3 = new SayaTubeVideo("Review Spiderman Home Coming oleh Akbar");
         SayaTubeVideo vid4 = new SayaTubeVideo("Review Avengers Age of ultron oleh Akbar");
-        SayaTubeVideo vid5 = new SayaTubeVideo("Review Avengers End game oleh Akbar");
+        SayaTubeVideo vid5 = new SayaTubeVideo("Review Avengers connect Re:End game oleh Akbar");
         SayaTubeVideo vid6 = new SayaTubeVideo("Review Avengers Infinity oleh Akbar");
         SayaTubeVideo vid7 = new SayaTubeVideo("Review Deadpool oleh Akbar");
         SayaTubeVideo vid8 = new SayaTubeVideo("Review Super30 oleh Akbar");
@@ -36,5 +36,26 @@ public class main {
 
         user1.printAllVideoPlaycount();
         System.out.println("Total playcount : "+user1.getTotalVideoPlayCount());
+
+        for(int i = 0; i<85;i++){
+            vid1.increasePlayCount(25000000);
+        }
+        System.out.println("Total playcount : "+user1.getTotalVideoPlayCount());
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeUser vid11 = new SayaTubeUser("");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try {
+            SayaTubeVideo vid11 = new SayaTubeVideo("a");
+            vid11.increasePlayCount(-5);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
